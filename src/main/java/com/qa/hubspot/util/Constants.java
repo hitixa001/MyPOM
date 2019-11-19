@@ -8,6 +8,6 @@ public class Constants {
 	
 	public final static String CONTACTS_PAGE_TITLE = "Contacts";
 	public final static String CONTACTS_SHEET_NAME = "contacts";
-	
+
 
 }
