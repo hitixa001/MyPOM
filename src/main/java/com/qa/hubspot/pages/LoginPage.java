@@ -12,20 +12,20 @@ public class LoginPage extends BasePage{
 	WebDriver driver;
 	ElementUtil elementUtil;
 	
-	//page-objects //object repository //by locators
+	//page-objects //object repository //by locators		--1
 	By emailID = By.id("username");
 	By password = By.id("password");
 	By loginBTN = By.id("loginBtn");
 	By signUpLink = By.linkText("Sign up");
 	
-	//create the constructor of page class:
+	//create the constructor of page class:		--2
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
 		elementUtil = new ElementUtil(driver);
 		elementUtil.waitForTitlePresent(Constants.LOGIN_PAGE_TITLE, 15);
 	}
 
-	//page-actions //page methods
+	//page-actions //page methods		--3 (1-2-3 this sequence we have to foloow for all the page classes)
 	public String getPageTitle() {
 		String title = elementUtil.waitForTitlePresent(Constants.LOGIN_PAGE_TITLE, 15);
 		System.out.println("Login Page title is: "+ title);
